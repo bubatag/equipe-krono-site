@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #E0830F;
+  --color-secondary: #AAAAAA;
+  --color-system: #F4F4F4;
+
+  --font-title: var(--font-audiowide), sans-serif;
+  --font-sans: var(--font-open-sans), sans-serif;
+}
+
+/* Forçamos o body a usar as SUAS cores por padrão, ignorando temas do navegador */
+body {
+  background-color: var(--color-system);
+  color: var(--color-secondary);
+}
