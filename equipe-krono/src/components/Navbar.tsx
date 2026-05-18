@@ -8,7 +8,7 @@ export default function Navbar() {
     "text-lg inline-block transition-all duration-300 ease-out hover:text-primary hover:scale-110";
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/70 backdrop-blur-sm border-b-3 border-primary">
+    <nav data-aos="fade-down" className="fixed top-0 left-0 right-0 z-50 bg-black/70 backdrop-blur-sm border-b-3 border-primary">
       <div className="relative flex items-center justify-between max-w-6xl mx-auto px-8 py-4 h-[72px]">
         
         {/* Logo */}

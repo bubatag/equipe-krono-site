@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Projeto() {
   return (
-    <section id="projeto" className="w-full bg-system py-20 lg:py-32 overflow-hidden">
+    <section id="projeto" className="w-full bg-system py-20 lg:py-32 overflow-hidden" data-aos="fade-down">
       <div className="max-w-7xl mx-auto px-8 flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
 
         {/* Coluna Esquerda: Card Bubatag */}

@@ -1,6 +1,6 @@
 export default function HeroSection() {
   return (
-    <section className="w-full overflow-hidden">
+    <section className="w-full overflow-hidden" data-aos="fade-down" data-aos-duration="1000">
       {/* Estilo embutido para a animação do neon passando pelo texto */}
       <style>{`
         @keyframes neon-shimmer {

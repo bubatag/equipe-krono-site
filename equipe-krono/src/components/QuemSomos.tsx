@@ -7,12 +7,13 @@ export default function QuemSomos() {
     // A seção tem position relative para segurar a imagem absoluta no desktop
     <section 
       id="quem-somos" 
-      className="relative w-full bg-system py-20 lg:py-32 overflow-hidden "
+      className="relative w-full bg-system py-20 lg:py-32 overflow-hidden"
+      
     >
       <div className="max-w-7xl mx-auto px-8 relative z-10 flex flex-col lg:flex-row items-center justify-between">
         
         {/* Lado Esquerdo (Conteúdo de Texto) */}
-        <div className="w-full lg:w-[55%]">
+        <div className="w-full lg:w-[55%]" data-aos="fade-right">
           <div className="relative mb-10">
             <h2 className="relative inline-block font-title text-4xl sm:text-5xl text-primary pb-3">
               Quem somos nós?
@@ -35,7 +36,7 @@ export default function QuemSomos() {
 
       {/* Lado Direito (Imagem encostada na margem direita da tela) */}
       {/* No mobile, ela se comporta como um bloco normal; no Desktop, fica absoluta na direita */}
-      <div className="mt-12 lg:mt-0 lg:absolute lg:right-0 lg:top-1/2 lg:-translate-y-1/2 w-full lg:w-[45vw] flex justify-end z-0">
+      <div data-aos="fade-left" className="mt-12 lg:mt-0 lg:absolute lg:right-0 lg:top-1/2 lg:-translate-y-1/2 w-full lg:w-[45vw] flex justify-end z-0">
         <Image
           src="/assets/quem-somos.png"
           alt="Mão robótica segurando um tablet com a logo KR"

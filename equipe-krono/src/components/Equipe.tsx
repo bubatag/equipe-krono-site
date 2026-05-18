@@ -54,7 +54,7 @@ const membrosEquipe = [
 
 export default function Equipe() {
   return (
-    <section id="equipe" className="w-full bg-system py-20 lg:py-32">
+    <section id="equipe" className="w-full bg-system py-20 lg:py-32" data-aos="fade-down">
       <div className="max-w-7xl mx-auto px-8">
         
         {/* Título e Linha Expandida */}
