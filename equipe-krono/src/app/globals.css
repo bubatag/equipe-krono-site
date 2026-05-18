@@ -9,6 +9,11 @@
   --font-sans: var(--font-open-sans), sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
+}
+
 /* Forçamos o body a usar as SUAS cores por padrão, ignorando temas do navegador */
 body {
   background-color: var(--color-system);
