@@ -2,39 +2,51 @@
 
 import Image from "next/image";
 import Link from "next/link";
+
 const membrosEquipe = [
   {
     nome: "Arthur Fukunaga",
     funcao: "UX/UI Designer",
-    imagem: "/assets/fuku.jpeg", 
+    imagemNormal: "/assets/fuku2.png", 
+    imagemHover: "/assets/fuku.jpeg",
+    corRgb: "255, 200, 0", // Amarelo
     instagram: "#",
     linkedin: "#",
   },
   {
     nome: "Leonardo de Lima",
     funcao: "Front-End Dev",
-    imagem: "/assets/leo.jpeg",
+    imagemNormal: "/assets/leo2.png",
+    imagemHover: "/assets/leo.jpeg",
+    corRgb: "0, 150, 255", // Azul
     instagram: "#",
     linkedin: "#",
   },
   {
     nome: "Cristhian Hatzman",
     funcao: "Back/Front-End Dev",
-    imagem: "/assets/cris.jpg",
+    imagemNormal: "/assets/cris2.png",
+    imagemHover: "/assets/cris.jpg",
+    corRgb: "0, 255, 100", // Verde
     instagram: "#",
     linkedin: "#",
   },
   {
     nome: "João Paulo",
     funcao: "UX/UI Designer & Front-End",
-    imagem: "/assets/jp0.jpg", 
+    imagemNormal: "/assets/jp2.png", 
+    imagemHover: "/assets/jp0.jpg", 
+    corRgb: "255, 255, 255", // Branco para o degradê e sombra
+    corIconeRgb: "0, 0, 0", // Preto EXCLUSIVO para o hover dos ícones
     instagram: "#",
     linkedin: "#",
   },
   {
     nome: "Vinicius de Souza",
     funcao: "Database Administrator",
-    imagem: "/assets/vini.jpeg",
+    imagemNormal: "/assets/vini2.png",
+    imagemHover: "/assets/vini.jpeg",
+    corRgb: "255, 50, 50", // Vermelho
     instagram: "#",
     linkedin: "#",
   },
@@ -51,7 +63,6 @@ export default function Equipe() {
             Nossa Equipe
           </h2>
           
-          {/* Linha agora ocupa 100% da largura do grid de cards */}
           <span 
             className="w-full h-[4px] bg-primary"
             style={{ clipPath: "polygon(0 0, 100% 0, calc(100% - 12px) 100%, 12px 100%)" }}
@@ -65,31 +76,54 @@ export default function Equipe() {
           {membrosEquipe.map((membro, index) => (
             <div 
               key={index} 
-              className="group relative bg-[#1A1A1A] rounded-2xl p-3 transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-[0_10px_30px_-10px_rgba(224,131,15,0.5)] flex flex-col h-full"
+              // Se o membro tiver 'corIconeRgb' (JP), usa ela. Se não, usa a 'corRgb' padrão.
+              style={{
+                "--card-shadow": `rgba(${membro.corRgb}, 0.7)`,
+                "--member-color": membro.corIconeRgb || membro.corRgb,
+              } as React.CSSProperties}
+              className="group relative bg-[#1A1A1A] rounded-2xl p-3 transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-[0_15px_30px_-5px_var(--card-shadow)] flex flex-col h-full overflow-hidden"
             >
-              {/* Camada de Gradiente Radial Laranja no Hover */}
+              
+              {/* Degrade Radial Sutil Permanente no Fundo do Card */}
               <div 
-                className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,rgba(224,131,15,0.25)_0%,transparent_80%)] opacity-0 transition-opacity duration-300 ease-out group-hover:opacity-100 rounded-2xl"
+                className="pointer-events-none absolute inset-0 z-0 transition-opacity duration-300 ease-in-out group-hover:opacity-80"
+                style={{
+                  background: `radial-gradient(circle at center, rgba(${membro.corRgb}, 0.5) 0%, transparent 80%)`
+                }}
                 aria-hidden="true"
               />
 
-              {/* Container da Imagem (com relative z-10 para ficar acima do brilho) */}
-              <div className="relative z-10 w-full aspect-[4/5] rounded-xl overflow-hidden bg-zinc-800">
+              {/* Container da Imagem */}
+              <div className="relative z-10 w-full aspect-[4/5] rounded-xl overflow-hidden bg-zinc-800 shadow-inner">
                 
-                {/* Componente Image Descomentado e Ativo */}
+                {/* 1. Imagem Padrão (Versão 2) - Esconde no Hover */}
                 <Image 
-                  src={membro.imagem} 
+                  src={membro.imagemNormal} 
                   alt={membro.nome} 
                   fill 
-                  className="object-cover transition-transform duration-500 group-hover:scale-105" 
+                  className="object-cover transition-all duration-500 group-hover:opacity-0 group-hover:scale-105" 
+                />
+
+                {/* 2. Imagem Hover (Versão Original) - Aparece no Hover */}
+                <Image 
+                  src={membro.imagemHover} 
+                  alt={`${membro.nome} - Hover`} 
+                  fill 
+                  className="object-cover absolute inset-0 opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:scale-105" 
+                />
+
+                {/* 3. Animação de Reflexo (Glare) passando sobre a imagem */}
+                <div 
+                  className="absolute top-0 left-[-150%] w-[100%] h-full bg-gradient-to-r from-transparent via-white/30 to-transparent transform -skew-x-12 transition-all duration-700 ease-in-out group-hover:left-[150%] z-20 pointer-events-none"
+                  aria-hidden="true"
                 />
 
                 {/* Aba Social */}
-                <div className="absolute bottom-3 right-3 bg-primary rounded-xl py-3 px-2 flex flex-col gap-4 shadow-lg">
+                <div className="absolute bottom-3 right-3 bg-primary rounded-xl py-3 px-2 flex flex-col gap-4 shadow-lg z-30">
                   <Link 
                     href={membro.instagram} 
                     target="_blank"
-                    className="text-white hover:text-black transition-colors duration-300 hover:scale-110 transform"
+                    className="text-white hover:text-[rgb(var(--member-color))] transition-colors duration-300 hover:scale-110 transform"
                     aria-label={`Instagram de ${membro.nome}`}
                   >
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
@@ -102,7 +136,7 @@ export default function Equipe() {
                   <Link 
                     href={membro.linkedin} 
                     target="_blank"
-                    className="text-white hover:text-black transition-colors duration-300 hover:scale-110 transform"
+                    className="text-white hover:text-[rgb(var(--member-color))] transition-colors duration-300 hover:scale-110 transform"
                     aria-label={`LinkedIn de ${membro.nome}`}
                   >
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
@@ -114,7 +148,7 @@ export default function Equipe() {
                 </div>
               </div>
 
-              {/* Informações do Integrante (com relative z-10 para ficar acima do brilho) */}
+              {/* Informações do Integrante */}
               <div className="relative z-10 mt-4 px-2 pb-2 flex-grow flex flex-col justify-center">
                 <h3 className="font-title text-white text-lg leading-tight">
                   {membro.nome}
