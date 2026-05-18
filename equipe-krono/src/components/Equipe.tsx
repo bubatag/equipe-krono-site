@@ -2,12 +2,11 @@
 
 import Image from "next/image";
 import Link from "next/link";
-
 const membrosEquipe = [
   {
     nome: "Arthur Fukunaga",
     funcao: "UX/UI Designer",
-    imagem: "/assets/fuku.jpeg",
+    imagem: "/assets/fuku.jpeg", 
     instagram: "#",
     linkedin: "#",
   },
@@ -28,7 +27,7 @@ const membrosEquipe = [
   {
     nome: "João Paulo",
     funcao: "UX/UI Designer & Front-End",
-    imagem: "/assets/jp.jpg",
+    imagem: "/assets/jp0.jpg", 
     instagram: "#",
     linkedin: "#",
   },
