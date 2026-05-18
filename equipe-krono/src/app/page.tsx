@@ -1,5 +1,6 @@
 import Equipe from "@/components/Equipe";
 import HeroSection from "@/components/HeroSection";
+import Projeto from "@/components/Projeto";
 import QuemSomos from "@/components/QuemSomos";
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
       <HeroSection />
       <QuemSomos />
       <Equipe />
+      <Projeto />
     </div>
   );
 }

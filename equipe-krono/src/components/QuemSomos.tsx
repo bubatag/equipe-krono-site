@@ -7,7 +7,7 @@ export default function QuemSomos() {
     // A seção tem position relative para segurar a imagem absoluta no desktop
     <section 
       id="quem-somos" 
-      className="relative w-full bg-system py-20 lg:py-25 overflow-hidden"
+      className="relative w-full bg-system py-20 lg:py-32 overflow-hidden "
     >
       <div className="max-w-7xl mx-auto px-8 relative z-10 flex flex-col lg:flex-row items-center justify-between">
         
