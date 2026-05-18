@@ -1,17 +1,19 @@
+import HeroSection from "@/components/HeroSection";
+
 export default function Home() {
   return (
     // font-title na raiz garante a Audiowide na página toda
-    <div className="flex min-h-screen flex-col items-center justify-center p-8 pt-24">
-      
-      <main className="flex w-full max-w-2xl flex-col items-center gap-6 text-center">
-        
+    <div className="flex min-h-screen flex-col items-center justify-center p-0 pt-[72px]">
+      <HeroSection />
+
+      <main className="flex w-full max-w-6xl flex-col items-center gap-6 px-6 py-16 text-center">
         {/* Título com a sua cor primária */}
         <h1 className="font-title text-4xl text-primary sm:text-5xl">
           To get started, edit the page.tsx file.
         </h1>
-        
+
         {/* Texto com a sua cor secundária */}
-        <p className="font-sans text-lg  text-black">
+        <p className="font-sans text-lg text-black">
           Olá, Somos um grupo de estudantes da Faculdade de Tecnologia de Registro (Fatec Registro), com formação e especialização na área de desenvolvimento de sistemas. Atualmente, estamos trabalhando em um projeto inovador voltado ao mercado de bubalinos, com o objetivo de contribuir para o aprimoramento da gestão e desenvolvimento dessa atividade no Brasil.
         </p>
 
@@ -34,7 +36,6 @@ export default function Home() {
             Documentation
           </a>
         </div>
-
       </main>
     </div>
   );
