@@ -36,8 +36,9 @@ const membrosEquipe = [
     funcao: "UX/UI Designer & Front-End",
     imagemNormal: "/assets/jp2.png", 
     imagemHover: "/assets/jp0.jpg", 
-    corRgb: "255, 255, 255", // Branco para o degradê e sombra
-    corIconeRgb: "0, 0, 0", // Preto EXCLUSIVO para o hover dos ícones
+    corRgb: "255, 255, 255", // Branco exclusivo para o degradê
+    corShadowRgb: "0, 0, 0", // Preto exclusivo para a sombra do card
+    corIconeRgb: "0, 0, 0", // Preto exclusivo para o hover dos ícones
     instagram: "#",
     linkedin: "#",
   },
@@ -76,15 +77,15 @@ export default function Equipe() {
           {membrosEquipe.map((membro, index) => (
             <div 
               key={index} 
-              // Se o membro tiver 'corIconeRgb' (JP), usa ela. Se não, usa a 'corRgb' padrão.
+              // Agora a sombra puxa de 'corShadowRgb' (se existir) ou 'corRgb' por padrão
               style={{
-                "--card-shadow": `rgba(${membro.corRgb}, 0.7)`,
+                "--card-shadow": `rgba(${membro.corShadowRgb || membro.corRgb}, 0.7)`,
                 "--member-color": membro.corIconeRgb || membro.corRgb,
               } as React.CSSProperties}
               className="group relative bg-[#1A1A1A] rounded-2xl p-3 transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-[0_15px_30px_-5px_var(--card-shadow)] flex flex-col h-full overflow-hidden"
             >
               
-              {/* Degrade Radial Sutil Permanente no Fundo do Card */}
+              {/* Degrade Radial Sutil Permanente no Fundo do Card (Usa sempre corRgb) */}
               <div 
                 className="pointer-events-none absolute inset-0 z-0 transition-opacity duration-300 ease-in-out group-hover:opacity-80"
                 style={{
