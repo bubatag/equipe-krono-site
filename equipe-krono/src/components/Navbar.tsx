@@ -27,8 +27,8 @@ export default function Navbar() {
           <Link href="#quem-somos" className={navLinkClasses}>
             Quem somos
           </Link>
-          <Link href="#membros" className={navLinkClasses}>
-            Membros
+          <Link href="#equipe" className={navLinkClasses}>
+            Equipe
           </Link>
           <Link href="#projeto" className={navLinkClasses}>
             Projeto
