@@ -28,8 +28,11 @@ const openSans = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "O Meu Projeto",
+  title: "Krono",
   description: "Criado com Next.js",
+  icons: {
+    icon: "/assets/krono-logo.svg",
+  },
 };
 
 export default function RootLayout({
