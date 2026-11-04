@@ -4,6 +4,8 @@
 
 O **Krono** é um site institucional desenvolvido para apresentar a equipe, sua identidade e seus projetos acadêmicos e tecnológicos. A página destaca os integrantes, apresenta a proposta do grupo e divulga o **BUBATAG**, uma solução tecnológica voltada ao monitoramento e ao bem-estar de bubalinos.
 
+🌐 **Acesse o site:** [bubatag-site.vercel.app](https://equipe-krono.vercel.app/)
+
 ## 📌 Sobre o Projeto
 
 O site foi desenvolvido por estudantes da **Faculdade de Tecnologia de Registro (Fatec Registro)** como uma página de apresentação da Equipe Krono.
