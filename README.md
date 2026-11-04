@@ -1,189 +1,174 @@
-# 🕐 Krono - Equipe Krono
+# ⏳ EQUIPE KRONO — Site Institucional
 
-> **Sistema de monitoramento de estresse e localização de bubalinos**
+### Site institucional para apresentação da Equipe Krono e divulgação de seus projetos.
 
-Uma plataforma inovadora desenvolvida por estudantes da **Fatec Registro**, dedicada a revolucionar a gestão de rebanhos de búfalos no Brasil através de tecnologia de ponta.
+O **Krono** é um site institucional desenvolvido para apresentar a equipe, sua identidade e seus projetos acadêmicos e tecnológicos. A página destaca os integrantes, apresenta a proposta do grupo e divulga o **BUBATAG**, uma solução tecnológica voltada ao monitoramento e ao bem-estar de bubalinos.
 
----
+## 📌 Sobre o Projeto
 
-## ✨ Features
+O site foi desenvolvido por estudantes da **Faculdade de Tecnologia de Registro (Fatec Registro)** como uma página de apresentação da Equipe Krono.
 
-- 🎬 **Hero Section Dinâmica** - Vídeo em full-width com animações neon
-- 📍 **Scroll Suave** - Navegação fluida entre seções
-- 🎨 **Design Responsivo** - Otimizado para desktop, tablet e mobile
-- ⚡ **Animações AOS** - Elementos aparecem com efeito fade ao scroll
-- 🌐 **UI/UX Profissional** - Paleta de cores corporativa e tipografia moderna
-- 📱 **Navbar Fixa** - Navegação sempre acessível
-- 🔗 **Links Sociais** - Integração com redes sociais da equipe
+A proposta é reunir, em um único ambiente, informações sobre o grupo, seus integrantes e o projeto desenvolvido, utilizando uma interface visual moderna, responsiva e com elementos interativos.
 
----
+## 🎯 Objetivos
 
-## 🛠️ Tecnologias
+- Apresentar a identidade e a proposta da Equipe Krono.
+- Divulgar os integrantes e suas respectivas áreas de atuação.
+- Apresentar o projeto BUBATAG e sua finalidade.
+- Disponibilizar uma página institucional acessível e responsiva.
+- Facilitar o acesso às informações sobre a equipe e seus projetos.
 
-- **Next.js 16** - Framework React moderno
-- **React 19** - Biblioteca de UI
-- **TypeScript** - Type safety
-- **Tailwind CSS 4** - Estilização utilitária
-- **AOS (Animate On Scroll)** - Animações ao scroll
-- **Next/Image** - Otimização de imagens
+## ✨ Funcionalidades
 
----
+- **Página inicial:** apresentação visual da Equipe Krono com vídeo de fundo e animações.
+- **Quem somos:** seção institucional com informações sobre o grupo.
+- **Nossa equipe:** apresentação dos integrantes, funções, fotografias e links para redes profissionais.
+- **Projeto:** divulgação do BUBATAG e acesso ao site oficial do projeto.
+- **Navegação fixa:** menu com acesso rápido às principais seções.
+- **Animações:** efeitos de entrada e transições durante a navegação.
+- **Design responsivo:** adaptação da interface para diferentes tamanhos de tela.
+- **Identidade visual:** tipografia personalizada, cores e elementos gráficos próprios da equipe.
 
-## 🚀 Como Instalar
+## 🛠️ Tecnologias Utilizadas
+
+| Tecnologia | Finalidade |
+|---|---|
+| Next.js 16 | Framework para desenvolvimento da aplicação web |
+| React 19 | Construção da interface por componentes |
+| TypeScript | Tipagem estática e organização do código |
+| Tailwind CSS 4 | Estilização e criação do layout responsivo |
+| AOS | Animações durante a rolagem da página |
+| Next/Image | Otimização e carregamento de imagens |
+| Next/Font | Carregamento e otimização das fontes locais |
+
+## 🚀 Como Executar o Projeto
 
 ### Pré-requisitos
-- Node.js 23.5.0+
-- npm 11.3.0+
 
-### Passos
+Antes de começar, verifique se você possui:
 
-1. **Clone o repositório**
+- [Node.js](https://nodejs.org/) 20.9 ou superior.
+- npm, instalado junto com o Node.js.
+- Git instalado na máquina.
+
+### 1. Clone o repositório
+
 ```bash
-git clone https://github.com/equipe-krono/equipe-krono-site.git
+git clone https://github.com/bubatag/equipe-krono-site.git
+```
+
+### 2. Entre na pasta do repositório
+
+```bash
 cd equipe-krono-site
 ```
 
-2. **Instale as dependências**
+### 3. Acesse a pasta da aplicação
+
+**Importante:** o projeto Next.js está dentro da pasta `equipe-krono/`. É nela que se encontra o arquivo `package.json`.
+
 ```bash
 cd equipe-krono
-npm install
 ```
 
-3. **Inicie o servidor de desenvolvimento**
+### 4. Instale as dependências
+
+```bash
+npm ci
+```
+
+### 5. Inicie o servidor de desenvolvimento
+
 ```bash
 npm run dev
 ```
 
-4. **Abra no navegador**
-Acesse `http://localhost:3000`
+### 6. Acesse no navegador
 
----
+Abra o endereço:
+
+```text
+http://localhost:3000
+```
 
 ## 📦 Scripts Disponíveis
 
-```bash
-# Inicia o servidor de desenvolvimento
-npm run dev
+Execute os comandos dentro da pasta `equipe-krono/`.
 
-# Constrói a aplicação para produção
-npm run build
-
-# Inicia o servidor de produção
-npm start
-
-# Executa o linter
-npm run lint
-```
-
----
+| Comando | Descrição |
+|---|---|
+| `npm run dev` | Inicia o servidor de desenvolvimento. |
+| `npm run build` | Gera a versão de produção da aplicação. |
+| `npm start` | Inicia a aplicação em modo de produção após o build. |
+| `npm run lint` | Executa a verificação de código com ESLint. |
 
 ## 📁 Estrutura do Projeto
 
+```text
+equipe-krono-site/
+│
+├── LICENSE
+├── README.md
+│
+└── equipe-krono/
+    ├── public/
+    │   └── assets/
+    │       ├── krono-logo.svg
+    │       ├── header-krono.mp4
+    │       ├── quem-somos.png
+    │       ├── bubatag.png
+    │       ├── titulo-bubatag.svg
+    │       └── imagens dos integrantes
+    │
+    ├── src/
+    │   ├── app/
+    │   │   ├── fonts/
+    │   │   ├── globals.css
+    │   │   ├── layout.tsx
+    │   │   └── page.tsx
+    │   │
+    │   └── components/
+    │       ├── AosProvider.tsx
+    │       ├── Navbar.tsx
+    │       ├── HeroSection.tsx
+    │       ├── QuemSomos.tsx
+    │       ├── Equipe.tsx
+    │       ├── Projeto.tsx
+    │       └── Footer.tsx
+    │
+    ├── package.json
+    ├── package-lock.json
+    ├── tsconfig.json
+    ├── next.config.ts
+    ├── tailwind.config.ts
+    └── postcss.config.mjs
 ```
-equipe-krono/
-├── public/
-│   └── assets/
-│       ├── krono-logo.svg
-│       ├── header-krono.mp4
-│       └── ...
-├── src/
-│   ├── app/
-│   │   ├── page.tsx
-│   │   ├── layout.tsx
-│   │   ├── globals.css
-│   │   └── fonts/
-│   └── components/
-│       ├── Navbar.tsx
-│       ├── HeroSection.tsx
-│       ├── QuemSomos.tsx
-│       ├── Equipe.tsx
-│       ├── Projeto.tsx
-│       ├── Footer.tsx
-│       └── AosProvider.tsx
-├── package.json
-├── tsconfig.json
-├── tailwind.config.ts
-└── next.config.ts
-```
 
----
+## 👥 Equipe Krono
 
-## 🎯 Seções da Página
+Atualmente, o site apresenta os seguintes integrantes:
 
-### 🎬 Hero Section
-Apresentação visual com vídeo em full-width e texto com gradiente neon.
+| Integrante | Área de atuação |
+|---|---|
+| Arthur Fukunaga | UX/UI Designer |
+| Leonardo de Lima | Front-End Developer |
+| Matheus Ferrari | Front-End e Back-End Developer |
+| Vinicius de Souza | Database Administrator |
 
-### 👥 Quem Somos
-Descrição da equipe e missão do projeto Krono, com imagem ilustrativa.
+## 🐃 Projeto em Destaque: BUBATAG
 
-### 👨‍💼 Nossa Equipe
-Grid de cards com integrantes, com efeito hover e redes sociais (Instagram, LinkedIn).
+O **BUBATAG** é uma solução tecnológica voltada ao monitoramento inteligente de bubalinos, utilizando Internet das Coisas (IoT), sensores e software para acompanhar informações relacionadas à localização e às condições fisiológicas dos animais.
 
-### 📊 Projeto
-Detalhes sobre o **Bubatag**, o sistema de monitoramento de bubalinos.
+O projeto busca contribuir para um manejo mais seguro e eficiente, promovendo o bem-estar animal e auxiliando os produtores na tomada de decisões.
 
-### 📞 Footer
-Informações de contato, endereço e redes sociais em layout responsivo.
+Acesse o site do projeto:
 
----
-
-## 🌐 Links Úteis
-
-- **Site Principal**: [krono-site.vercel.app](https://krono-site.vercel.app)
-- **Bubatag**: [bubatag-site.vercel.app](https://bubatag-site.vercel.app)
-- **Instagram**: [@Krono](https://instagram.com/krono)
-- **Contato**: (55) +13 98195-2523
-
----
-
-## 👥 Equipe
-
-| Nome | Função |
-|------|--------|
-| **Arthur Fukunaga** | UX/UI Designer |
-| **Leonardo de Lima** | Front-End Dev |
-| **Cristhian Hatzman** | Back/Front-End Dev |
-| **João Paulo** | UX/UI Designer & Front-End |
-| **Vinicius de Souza** | Database Administrator |
-
----
-
-## 📍 Localização
-
-**Fatec Registro**  
-Av. Clara Gionotti de Souza, 257  
-Registro - SP, Brasil
-
----
+**[BUBATAG — Site Oficial](https://bubatag-site.vercel.app/)**
 
 ## 📄 Licença
 
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](./LICENSE) para mais detalhes.
+Este projeto está sob a licença MIT. Consulte o arquivo [LICENSE](./LICENSE) para obter mais informações.
 
 ---
 
-## 🤝 Contribuições
-
-Contribuições são bem-vindas! Para contribuir:
-
-1. Faça um fork do projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
-5. Abra um Pull Request
-
----
-
-## 💬 Feedback
-
-Tem alguma sugestão ou encontrou um bug? Abra uma [issue](https://github.com/equipe-krono/equipe-krono-site/issues) no repositório!
-
----
-
-<div align="center">
-
-**Desenvolvido com ❤️ pela Equipe Krono**
-
-© 2026 Equipe Krono. Todos os direitos reservados.
-
-</div>
+**Desenvolvido pela Equipe Krono — Fatec Registro.**
